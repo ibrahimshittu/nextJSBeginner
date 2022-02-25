@@ -5,7 +5,6 @@ import ArticleStyle from '../styles/Article.module.css'
 
 export default function Home({articles}) {
   return (
-    console.log(articles),
     <div>
       <Head>
         <title>Web Dev news</title>
@@ -13,19 +12,12 @@ export default function Home({articles}) {
       </Head>
 
       <ArticleList articles={articles}/>
-
-      {/* {articles.map(article => (
-        <div key={article.id}>
-          <h3>{article.title}</h3>
-          <p>{article.body}</p>
-        </div>))
-      } */}
     </div>
   )
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5`)
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
   const articles = await res.json()
   return {
     props: {articles}
