@@ -1,14 +1,11 @@
-import Head from 'next/head'
+import Meta from '../components/Meta'
 
 
 const about = () => {
   return (
       
     <div>
-        <Head>
-            <title>Web Dev news about</title>
-            <meta name="keywords" content='web development for beginners'/>
-        </Head>
+       <Meta/>
       about
     </div>
   )

@@ -1,16 +1,13 @@
-import Head from 'next/head'
 import {server} from '../config/index'
 import ArticleList from '../components/ArticleList'
 import ArticleStyle from '../styles/Article.module.css'
+import Meta from '../components/Meta'
 
 
 export default function Home({articles}) {
   return (
     <div>
-      <Head>
-        <title>Web Dev news</title>
-        <meta name="keywords" content='web development for beginners'/>
-      </Head>
+      <Meta/>
 
       <ArticleList articles={articles}/>
     </div>
