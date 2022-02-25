@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-function Meta({title, keyword, decription}) {
+function Meta({title, keywords, description}) {
   return (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -11,6 +11,12 @@ function Meta({title, keyword, decription}) {
       <title>{title}</title>
     </Head>
   )
+}
+
+Meta.defaultProps = {
+  title: 'WebDev Newz',
+  keywords: 'web development, programming',
+  description: 'Get the latest news in web dev',
 }
 
 export default Meta
