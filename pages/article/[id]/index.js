@@ -1,13 +1,16 @@
 import {useRouter} from 'next/router'
 import {server} from '../../../config/index'
 import Link from 'next/link'
+import Meta from '../../../components/Meta'
 
 const article = ({article}) => {
     // const router = useRouter()
     // const {id} = router.query
 
     return (
-        <><h1>{article.title} </h1> 
+        <>
+        <Meta title={article.title}/>
+        <h1>{article.title} </h1> 
         <p>{article.body}</p>
         <Link href='/'> Go back </Link>
         </>
